@@ -54,6 +54,7 @@ body {
   color: var(--fontcolor);
   background-color: var(--bg);
   font-family: var(--Thin);
+  overflow-x: hidden;
 }
 
 .page1 {
@@ -63,6 +64,8 @@ body {
   /* display: flex; */
   /* align-items: center; */
   /* flex-direction: column; */
+  padding: 2vw 2.5vw;
+  position: relative;
 }
 
 .page1 nav {
@@ -70,7 +73,6 @@ body {
   justify-content: space-between;
   align-items: center;
   /* align-items: center; */
-  padding: 2vw 2.5vw;
 }
 
 nav .nav-elem {
@@ -120,18 +122,16 @@ nav .nav-elem h4:hover a {
 
 .page1 .content {
   width: 100%;
-  height: 75%;
+  height: 40vw;
   /* background-color: red; */
   display: flex;
   justify-content: space-between;
-  padding: 2vw 2.5vw;
 }
 
 .page1 .bottom {
-  width: 95%;
+  width: 100%;
   height: 0.1vh;
   background-color: #b0b0b0;
-  margin: 2vw 2.5vw;
 }
 
 .content .left {
@@ -140,7 +140,7 @@ nav .nav-elem h4:hover a {
   justify-content: flex-end;
   width: 30%;
   height: 100%;
-  padding-bottom: 4vh;
+  padding-bottom: 8vh;
 }
 
 .content .left h4 {
@@ -157,7 +157,7 @@ nav .nav-elem h4:hover a {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-bottom: 4vh;
+  padding-bottom: 8vh;
 }
 
 .content .right h1 {
@@ -166,7 +166,98 @@ nav .nav-elem h4:hover a {
   line-height: 0.8em;
 }
 
-.page2{
-    width: 100%;
-    height: 100vh;
+.page1 .bulge {
+  position: absolute;
+  width: 46vw;
+  height: 36vw;
+  right: 0;
+  top: 79vh;
+}
+
+.bulge .hero1 {
+  background-color: var(--primarycolor);
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(10px);
+  position: absolute;
+}
+
+.bulge .hero2 {
+  background: linear-gradient(var(--primarycolor), var(--secondarycolor));
+  /* background-color: blue; */
+  height: 30vw;
+  width: 30vw;
+  left: 55vh;
+  border-radius: 50%;
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  filter: blur(25px);
+}
+
+.bulge .hero3 {
+  background: linear-gradient(var(--primarycolor), var(--secondarycolor));
+  /* background-color:bisque; */
+  height: 30vw;
+  position: absolute;
+  width: 30vw;
+  border-radius: 50%;
+  filter: blur(25px);
+  animation-name: anime1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 1;
+}
+
+.bulge .hero4 {
+  background: linear-gradient(var(--primarycolor), var(--secondarycolor));
+  /* background-color: aqua; */
+  height: 30vw;
+  position: absolute;
+  width: 30vw;
+  border-radius: 50%;
+  filter: blur(25px);
+  top: 12vh;
+  left: 60vh;
+  z-index: 1;
+}
+
+@keyframes anime1 {
+  from {
+    transform: translate(55%, 10%);
+  }
+
+  to {
+    transform: translate(-30%, 4%);
+  }
+}
+
+@keyframes anime2 {
+  from {
+    transform: translate(15%, -15%);
+  }
+
+  to {
+    transform: translate(-60%, -7%);
+  }
+}
+
+.page1 video {
+  position: relative;
+  border-radius: 30px;
+  margin-top: 4vw;
+  width: 100%;
+  z-index: 10;
+}
+
+.page2 {
+  width: 100%;
+  height: 100vh;
 }
